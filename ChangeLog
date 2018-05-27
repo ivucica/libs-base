@@ -1,3 +1,16 @@
+2018-05-27  Ivan Vucica <ivan@vucica.net>
+
+	* Tests/base/NSValue/size-point-encoding.m: Tests for assumptions
+	that GNUstep's reimplementation of Core Animation APIs makes with
+	regards to NSValue and KVC behavior. For instance, one assumption
+	made is that CGSize will be stored correctly. Additionally, there
+	is the assumption that it will not be incorrectly unpacked into a
+	CGPoint. Using KVC to assign a struct NSValue should also trigger
+	a KVO notification.
+
+	These tests were added while investigating the symptoms caused by
+	https://savannah.gnu.org/bugs/index.php?53994.
+
 2018-05-27  Fred Kiefer <fredkiefer@gmx.de>
 
 	* Tests/base/NSProcessInfo/general.m: Mark test for -systemUptime
