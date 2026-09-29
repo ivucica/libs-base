@@ -118,3 +118,6 @@ Documentation/manual/gs-base.info
 Documentation/manual/gs-base
 Documentation/gs-standards
 
+/bazel-*
+/MODULE.bazel.lock
+!.bazel/**
